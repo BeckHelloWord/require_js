@@ -15,6 +15,15 @@
     </div>
 
     <script>
+        require.config({
+            baseUrl: "js/",
+            paths: {
+                "jquery": "jquery",
+                "a": "a",
+                "b": "b"
+            }
+        });
+        
         require(['jquery', 'a', 'b'], function ($, jsa, jsb) {
             var sum = jsa.aVal + jsb.a(5, 9);
             $('.box').on('click', function () {
